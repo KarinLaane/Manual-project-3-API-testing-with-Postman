@@ -1,0 +1,4817 @@
+{
+	"info": {
+		"_postman_id": "541b13a9-5409-4908-adc4-f100766e26c3",
+		"name": "Sprint 2 - Team 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27635045",
+		"_collection_link": "https://warped-comet-740070.postman.co/workspace/CRM-Project~ea4907a6-d4b4-4f19-9174-15e202ab0e12/collection/30586240-541b13a9-5409-4908-adc4-f100766e26c3?action=share&source=collection_link&creator=27635045"
+	},
+	"item": [
+		{
+			"name": "Deals",
+			"item": [
+				{
+					"name": "GET - the list of all deals",
+					"item": [
+						{
+							"name": "Get list of Deals - default (FAILED - T8CA- 333)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "file_list_custom_data_file",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals - no authorisation (FAILED - T8CA-332)",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "file_list_custom_data_file",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals - limit set to 0 (FAILED - T8CA-333)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal?limit=0",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "0"
+										},
+										{
+											"key": "file_list_custom_data_file",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals - limit max value 100 (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal?limit=100",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "file_list_custom_data_file",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals - limit set to 101 (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal?limit=101",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "101"
+										},
+										{
+											"key": "file_list_custom_data_file",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals - limit set to -10 (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal?limit=-10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "-10"
+										},
+										{
+											"key": "file_list_custom_data_file",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals - limit non integer (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal?limit=text",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "text"
+										},
+										{
+											"key": "file_list_custom_data_file",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals -  cursor default value 0 (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal?cursor=0",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "cursor",
+											"value": "0"
+										},
+										{
+											"key": "file_list_custom_data_file",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals -  cursor set to 50 (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal?cursor=50",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "cursor",
+											"value": "50"
+										},
+										{
+											"key": "file_list_custom_data_file",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals -  cursor set to -10 (FAILED T8CA-334)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal?cursor=-10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "cursor",
+											"value": "-10"
+										},
+										{
+											"key": "file_list_custom_data_file",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals -  cursor non integer (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal?cursor=text",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "cursor",
+											"value": "text"
+										},
+										{
+											"key": "file_list_custom_data_file",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals - sorted by deal name (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal?sort_field=name_text",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "sort_field",
+											"value": "name_text"
+										},
+										{
+											"key": "file_list_custom_data_file",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals - sort descending (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal?sort_field=name_text&descending=true",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "sort_field",
+											"value": "name_text"
+										},
+										{
+											"key": "descending",
+											"value": "true"
+										},
+										{
+											"key": "file_list_custom_data_file",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals - sort ascending (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal?sort_field=name_text&descending=false",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "sort_field",
+											"value": "name_text"
+										},
+										{
+											"key": "descending",
+											"value": "false"
+										},
+										{
+											"key": "file_list_custom_data_file",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals - in funnel “Lead acquisition (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal?constraints=[{\"key\": \"funnel_custom_funnel1\", \"constraint_type\": \"equals\", \"value\": \"1678717895619x961701523337510900\" }]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"funnel_custom_funnel1\", \"constraint_type\": \"equals\", \"value\": \"1678717895619x961701523337510900\" }]"
+										},
+										{
+											"key": "descending",
+											"value": "false",
+											"disabled": true
+										},
+										{
+											"key": "file_list_custom_data_file",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals - Search a deal with existing name (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal?constraints=[{\"key\": \"name_text\", \"constraint_type\": \"equals\", \"value\": \"Pirate\" }]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"name_text\", \"constraint_type\": \"equals\", \"value\": \"Pirate\" }]"
+										},
+										{
+											"key": "descending",
+											"value": "false",
+											"disabled": true
+										},
+										{
+											"key": "file_list_custom_data_file",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of Deals - Search a deal with incorrect or non-existing deal name (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal?constraints=[{\"key\": \"name_text\", \"constraint_type\": \"equals\", \"value\": \"{{$randomCompanyName}}\" }]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									],
+									"query": [
+										{
+											"key": "descending",
+											"value": "false",
+											"disabled": true
+										},
+										{
+											"key": "file_list_custom_data_file",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"name_text\", \"constraint_type\": \"equals\", \"value\": \"{{$randomCompanyName}}\" }]"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET - deal by Id",
+					"item": [
+						{
+							"name": "Get Deal by Id - existing id (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1625053881585x270893551262105600"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Deal by Id - no authorization  (FAILED - T8CA-270)",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1625053881585x270893551262105600"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Deal by Id - empty id value (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Deal by Id - partial id (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1625053881585"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Deal by Id - not existent (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "{{$randomWords}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Deal by Id - different id (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1625047822374x314234657054522700"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "POST - create a new deal",
+					"item": [
+						{
+							"name": "Create a new Deal - Minimum dataset (PASSED)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 tester\",\n  \"deal_value_estimation_number\": 1,\n  \"name_text\": \"Team1\",\n  \"order_number\": 1,\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n    \"1625047373081x778685405315052900\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - No auth (PASSED)",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"{{$randomCompanyName}}\",\n  \"deal_value_estimation_number\": 2,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"name_text\": \"Team1 test\",\n  \"order_number\": 1,\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1625047373081x778685405315052900\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - Empty Body (FAILED T8CA-271)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - Empty assignee user ( FAILED T8CA-273)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"\",\n  \"company_name_text\": \"{{$randomCompanyName}}\",\n  \"deal_value_estimation_number\": 2,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"name_text\": \"Team1 test\",\n  \"order_number\": 1,\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1625047373081x778685405315052900\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - Assignee user in integer (PASSED)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": 0,\n  \"company_name_text\": \"{{$randomCompanyName}}\",\n  \"deal_value_estimation_number\": 2,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"name_text\": \"Team1 test\",\n  \"order_number\": 1,\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1625047373081x778685405315052900\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - Empty company name(FAILED T8CA-274)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"\",\n  \"deal_value_estimation_number\": 2,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"name_text\": \"Team1 test\",\n  \"order_number\": 1,\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1625047373081x778685405315052900\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - Company name in integer (PASSED)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": 0,\n  \"deal_value_estimation_number\": 2,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"name_text\": \"Team1 test\",\n  \"order_number\": 1,\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1625047373081x778685405315052900\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - Empty Deal value estimation number (PASSED)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test\",\n  \"deal_value_estimation_number\":,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"name_text\": \"Team1 test\",\n  \"order_number\": 1,\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1625047373081x778685405315052900\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - Deal value estimation number in string (PASSED)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test\",\n  \"deal_value_estimation_number\":\"test\",\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"name_text\": \"Team1 test\",\n  \"order_number\": 1,\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1625047373081x778685405315052900\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - Empty name(FAILED T8CA-275)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test\",\n  \"deal_value_estimation_number\":1,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"name_text\": \"\",\n  \"order_number\": 1,\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1625047373081x778685405315052900\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - Name in integer(PASSED)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test\",\n  \"deal_value_estimation_number\":1,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"name_text\": 0,\n  \"order_number\": 1,\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1625047373081x778685405315052900\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - Empty order number(PASSED)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test\",\n  \"deal_value_estimation_number\":1,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"name_text\": \"Team1 test\",\n  \"order_number\":,\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1625047373081x778685405315052900\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - Order number in string (PASSED)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test\",\n  \"deal_value_estimation_number\":1,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"name_text\": \"Team1 test\",\n  \"order_number\":\"test\",\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1625047373081x778685405315052900\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - Empty status option(FAILED T8CA-276)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test\",\n  \"deal_value_estimation_number\":1,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"name_text\": \"Team1 test\",\n  \"order_number\":0,\n  \"status_option_status\": \"\",\n  \"visible_to_list_user\": [\n    \"1625047373081x778685405315052900\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - Status option in integer (PASSED)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test\",\n  \"deal_value_estimation_number\":1,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"name_text\": \"Team1 test\",\n  \"order_number\":0,\n  \"status_option_status\": 1,\n  \"visible_to_list_user\": [\n    \"1625047373081x778685405315052900\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - Empty visible to list user (FAILED T8CA-277)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test\",\n  \"deal_value_estimation_number\":1,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"name_text\": \"Team1 test\",\n  \"order_number\":0,\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new Deal - Visible to list user in integer (PASSED)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test\",\n  \"deal_value_estimation_number\":1,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"name_text\": \"Team1 test\",\n  \"order_number\":0,\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    0\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PATCH - modify deal data",
+					"item": [
+						{
+							"name": "Modify deal data - all fields valid (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"assignee__user\": \"1625047373081x778685405315052900\",\r\n  \"company_name_text\": \"Team1 Karin Patch1\",\r\n  \"deal_value_estimation_number\": 1,\r\n  \"description_text\": \"Test123\",\r\n  \"file_list_custom_data_file\": [],\r\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\r\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\r\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\r\n  \"name_text\": \"Team1 Karin Patch1\",\r\n  \"note_list_custom_note\": [\r\n    \"1678718690483x188510294479732740\"\r\n  ],\r\n  \"order_number\": 1,\r\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\r\n  \"status_option_status\": \"In progress\",\r\n  \"visible_to_list_user\": [\r\n      \"1625047373081x778685405315052900\",\r\n          \"1625047362532x398219546419355650\"\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data - mandatory fields (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"assignee__user\": \"1625047373081x778685405315052900\",\r\n  \"company_name_text\": \"Team1 Karin Patch2\",\r\n  \"deal_value_estimation_number\": 1,\r\n \"name_text\": \"Team1 Karin Patch2\",\r\n \"order_number\": 1,\r\n  \"status_option_status\": \"In progress\",\r\n  \"visible_to_list_user\": [\r\n      \"1625047373081x778685405315052900\",\r\n          \"1625047362532x398219546419355650\"\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data- no authorisation (PASSED)",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"assignee__user\": \"1625047373081x778685405315052900\",\r\n  \"company_name_text\": \"Team1 Karin Patch2\",\r\n  \"deal_value_estimation_number\": 1,\r\n \"name_text\": \"Team1 Karin Patch2\",\r\n \"order_number\": 1,\r\n  \"status_option_status\": \"In progress\",\r\n  \"visible_to_list_user\": [\r\n      \"1625047373081x778685405315052900\",\r\n          \"1625047362532x398219546419355650\"\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data - empty body (FAILED T8CA-335)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data- not existing deal with random Id (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n \"name_text\": \"Team1 Karin Patch2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "123456"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data - empty Id (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n \"name_text\": \"Team1 Karin Patch2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data - assignee__user (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"assignee__user\": \"1625047362532x398219546419355650\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data- assignee__user - integer (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"assignee__user\": 111\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data - assignee__user - empty (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"assignee__user\":\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data - company_name_text  (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"company_name_text\": \"CHANGED Team 1 Karin Patch\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data - company_name_text - empty (FAILED T8CA-335)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"company_name_text\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data - company_name_text - integer (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"company_name_text\": 111\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -  deal_value_estimation_number (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"deal_value_estimation_number\": 1000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -  deal_value_estimation_number string (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"deal_value_estimation_number\": \"Test1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -  deal_value_estimation_number - negative integer (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"deal_value_estimation_number\": -1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -  description_text (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"description_text\": \"Muudetud description\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -  description_text - integer (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"description_text\": 111\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -  file_list_custom_data_file - integer (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"file_list_custom_data_file\": 111\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -  funnel_custom_funnel1 - integer (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"funnel_custom_funnel1\": 111\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -  lead_custom_lead - integer (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"lead_custom_lead\": 111\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -  name_text (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name_text\": \"Muudetud TEAM1 PATCH Karin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -   name_text - integer (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name_text\": 111\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -  note_list_custom_note - integer (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"note_list_custom_note\": [\r\n    111\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -   order_number (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"order_number\": 27\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -  order_number - string (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"order_number\": \"team1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -  stage_custom_stage (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"stage_custom_stage\": \"1625047833003x411752455944692100\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -  status_option_status (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"status_option_status\": \"Lost\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -  status_option_status - invalid data (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"status_option_status\": \"Invalid data\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data -  visible_to_list_user (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"visible_to_list_user\": [\r\n       \"1625047362532x398219546419355650\"\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify deal data - visible_to_list_user - integer (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"visible_to_list_user\": [\r\n    111\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698492595035x203996799068560060"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PUT - replace deal data",
+					"item": [
+						{
+							"name": "Replace deal data - min set of fields (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT\",\n  \"deal_value_estimation_number\": 2,\n  \"name_text\": \"Team1_A-M PUT\",\n  \"order_number\": 2,\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1625047373081x778685405315052900\",\n    \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data - all fields valid (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data - no authorization (PASSED)",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data - empty body (FAILED - T8CA-289)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data - empty id (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: assignee__user - empty (FAILED - T8CA-292)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: assignee__user - integer (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": 123,\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: company_name_text - empty(FAILED - T8CA-293)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: company_name_text - integer (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": 123,\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: deal_value_estimation_number - empty (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": ,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: deal_value_estimation_number - negative (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": -10000,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: deal_value_estimation_number - string (FAILED - T8CA-294)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": \"1\",\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: description_text - integer (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": 123,\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: file_list_custom_data_file - integer (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": 123,\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: funnel_custom_funnel1 - integer (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": 123,\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: funnel_custom_funnel1 - partial funnel Id (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data:lead_custom_lead - integer (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": 123,\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data:lead_custom_lead - partial lead Id (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: name_text - empty (FAILED - T8CA-295)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: name_text - integer (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": 123,\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: note_list_custom_note - integer (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    123\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: note_list_custom_note - partial note Id (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"78718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: order_number - empty (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": , \n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: order_number - string (FAILED - T8CA-296)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": \"123\",\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: stage_custom_stage - integer (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": 123,\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: stage_custom_stage - partial stage Id (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"25047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: status_option_status - integer (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": 123,\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: status_option_status - invalid data (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Incorrect\",\n  \"visible_to_list_user\": [\n      \"1625047373081x778685405315052900\",\n          \"1625047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: visible_to_list_user - empty (FAILED - T8CA-297)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: visible_to_list_user - integer (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n123\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace deal data: visible_to_list_user - partial user Id (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1625047373081x778685405315052900\",\n  \"company_name_text\": \"Team1 test A-M PUT2\",\n  \"deal_value_estimation_number\": 1,\n  \"description_text\": \"This is a test\",\n  \"file_list_custom_data_file\": [],\n  \"funnel_custom_funnel1\": \"1697712429736x604475436022720900\",\n  \"lead_custom_lead\": \"1697609042937x450280473509041340\",\n  \"logo_image\": \"//s3.amazonaws.com/appforest_uf/f1625048400000x197283151654211740/preview.png\",\n  \"name_text\": \"Team1_A-M PUT2\",\n  \"note_list_custom_note\": [\n    \"1678718690483x188510294479732740\"\n  ],\n  \"order_number\": 1,\n  \"stage_custom_stage\": \"1625047818390x664413796313397600\",\n  \"status_option_status\": \"Won\",\n  \"visible_to_list_user\": [\n      \"1625\",\n          \"047362532x398219546419355650\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698306280556x987871451749170400"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DELETE - Delete Deals",
+					"item": [
+						{
+							"name": "Delete Deals - Existing ID (PASSED)",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1696659261091x541239446325940200\",\n  \"company_name_text\": \"{{$randomCompanyName}}\",\n  \"deal_value_estimation_number\": 607000,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"file_list_custom_data_file\": [\n  ],\n  \"logo_image\": \"\",\n  \"funnel_custom_funnel1\": \"1678717895619x961701523337510900\",\n  \"name_text\": \"Mercedes-AMG PETRONAS F1 - Promo campaign\",\n  \"order_number\": 0,\n  \"stage_custom_stage\": \"1625047829315x658646823454309500\",\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1696659261091x541239446325940200\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698226047190x826967373764719000"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Deals - No auth (PASSED)",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1696659261091x541239446325940200\",\n  \"company_name_text\": \"{{$randomCompanyName}}\",\n  \"deal_value_estimation_number\": 607000,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"file_list_custom_data_file\": [\n  ],\n  \"logo_image\": \"\",\n  \"funnel_custom_funnel1\": \"1678717895619x961701523337510900\",\n  \"name_text\": \"Mercedes-AMG PETRONAS F1 - Promo campaign\",\n  \"order_number\": 0,\n  \"stage_custom_stage\": \"1625047829315x658646823454309500\",\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1696659261091x541239446325940200\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698226356725x577509106487334800"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Deals -  partial ID (PASSED)",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1696659261091x541239446325940200\",\n  \"company_name_text\": \"{{$randomCompanyName}}\",\n  \"deal_value_estimation_number\": 607000,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"file_list_custom_data_file\": [\n  ],\n  \"logo_image\": \"\",\n  \"funnel_custom_funnel1\": \"1678717895619x961701523337510900\",\n  \"name_text\": \"Mercedes-AMG PETRONAS F1 - Promo campaign\",\n  \"order_number\": 0,\n  \"stage_custom_stage\": \"1625047829315x658646823454309500\",\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1696659261091x541239446325940200\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "459749771043646660"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Deals - Delete same Deal twice (PASSED)",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1696659261091x541239446325940200\",\n  \"company_name_text\": \"{{$randomCompanyName}}\",\n  \"deal_value_estimation_number\": 607000,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"file_list_custom_data_file\": [\n  ],\n  \"logo_image\": \"\",\n  \"funnel_custom_funnel1\": \"1678717895619x961701523337510900\",\n  \"name_text\": \"Mercedes-AMG PETRONAS F1 - Promo campaign\",\n  \"order_number\": 0,\n  \"stage_custom_stage\": \"1625047829315x658646823454309500\",\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1696659261091x541239446325940200\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1698226722214x691076485064702500"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Deals -  Empty Deal ID (PASSED)",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignee__user\": \"1696659261091x541239446325940200\",\n  \"company_name_text\": \"{{$randomCompanyName}}\",\n  \"deal_value_estimation_number\": 607000,\n  \"description_text\": \"{{$randomLoremSentence}}\",\n  \"file_list_custom_data_file\": [\n  ],\n  \"logo_image\": \"\",\n  \"funnel_custom_funnel1\": \"1678717895619x961701523337510900\",\n  \"name_text\": \"Mercedes-AMG PETRONAS F1 - Promo campaign\",\n  \"order_number\": 0,\n  \"stage_custom_stage\": \"1625047829315x658646823454309500\",\n  \"status_option_status\": \"In progress\",\n  \"visible_to_list_user\": [\n    \"1696659261091x541239446325940200\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "GET - the list of all notes",
+					"item": [
+						{
+							"name": "Get list of notes - Get a list of notes without authorization (FAILED - T8CA-381)",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": null,
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "cursor",
+											"value": null,
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "sort_field",
+											"value": null,
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": null,
+											"description": "boolean",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": null,
+											"description": "string",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of notes - Get a list of notes - default (FAILED - T8CA-382)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": null,
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "cursor",
+											"value": null,
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "sort_field",
+											"value": null,
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": null,
+											"description": "boolean",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": null,
+											"description": "string",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of notes - Get a list of 100 notes (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note?limit=100",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100",
+											"description": "integer"
+										},
+										{
+											"key": "cursor",
+											"value": "",
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "sort_field",
+											"value": "Modified Date",
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": "true",
+											"description": "boolean",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "",
+											"description": "string",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of notes - Get a list of 101 notes (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note?limit=101",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									],
+									"query": [
+										{
+											"key": "cursor",
+											"value": "",
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "sort_field",
+											"value": "Modified Date",
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": "true",
+											"description": "boolean",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "",
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "101"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of notes - Get a list of 1 note (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note?limit=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "1",
+											"description": "integer"
+										},
+										{
+											"key": "cursor",
+											"value": "",
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "sort_field",
+											"value": "Modified Date",
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": "true",
+											"description": "boolean",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "",
+											"description": "string",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of notes - Set list of notes size to zero (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note?limit=0",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "0",
+											"description": "integer"
+										},
+										{
+											"key": "cursor",
+											"value": "",
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "sort_field",
+											"value": "Modified Date",
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": "true",
+											"description": "boolean",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "",
+											"description": "string",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of notes - Retrieve a list of notes beginning from a specified position in the list (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note?cursor=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "0",
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "cursor",
+											"value": "1",
+											"description": "integer"
+										},
+										{
+											"key": "sort_field",
+											"value": "Modified Date",
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": "true",
+											"description": "boolean",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "",
+											"description": "string",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of notes - Get a list of notes and sort them by creation date (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note?sort_field=Created Date&descending=false",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "",
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "cursor",
+											"value": "",
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "sort_field",
+											"value": "Created Date",
+											"description": "string"
+										},
+										{
+											"key": "descending",
+											"value": "false",
+											"description": "boolean"
+										},
+										{
+											"key": "constraints",
+											"value": "",
+											"description": "string",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get list of notes - Get a list of all notes and sort them by modification date (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note?sort_field=Modified Date&descending=true",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "",
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "cursor",
+											"value": "",
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "sort_field",
+											"value": "Modified Date",
+											"description": "string"
+										},
+										{
+											"key": "descending",
+											"value": "true",
+											"description": "boolean"
+										},
+										{
+											"key": "constraints",
+											"value": "",
+											"description": "string",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a list of notes - Search for a note with keyword (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note?constraints=[{\"key\": \"content_text\", \"constraint_type\": \"text contains\", \"value\": \"Test\"}]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "0",
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "cursor",
+											"value": "1",
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "sort_field",
+											"value": "Modified Date",
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": "true",
+											"description": "boolean",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"content_text\", \"constraint_type\": \"text contains\", \"value\": \"Test\"}]",
+											"description": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a list of notes - Search for a note with non-existent keyword (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note?constraints=[{\"key\": \"content_text\", \"constraint_type\": \"text contains\", \"value\": \"kukujuku\"}]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "0",
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "cursor",
+											"value": "1",
+											"description": "integer",
+											"disabled": true
+										},
+										{
+											"key": "sort_field",
+											"value": "Modified Date",
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "descending",
+											"value": "true",
+											"description": "boolean",
+											"disabled": true
+										},
+										{
+											"key": "constraints",
+											"value": "[{\"key\": \"content_text\", \"constraint_type\": \"text contains\", \"value\": \"kukujuku\"}]",
+											"description": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET - note by Id",
+					"item": [
+						{
+							"name": "Get note by id - Get Note by correct Id (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698482398470x344423025127432260"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get note by id - Get Note by incorrect Id (PASSED)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698479319084x363790735153332900"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "POST - create a new note",
+					"item": [
+						{
+							"name": "Create a new note - Create a note without authorization (PASSED)",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"Team 1 test note\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new note - Create a note with minimum dataset (PASSED)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"Team 1 test note!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new note - Create a new note with empty body (FAILED - T8CA-385)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new note - Create a new Note with empty string in content_text (FAILED - T8CA-386)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new note - Create a note with integer value in content_text field (PASSED)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PATCH - modify note data",
+					"item": [
+						{
+							"name": "Mofidy note data - Modify note without authorization (PASSED)",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"Team 1 got a response from customer. We agreed to proceed with the deal and now the new input needed from us.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698482398470x344423025127432260"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify note data - Modify note and check data (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"Patch request testing.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698482398470x344423025127432260"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify note data - Modify note empty body request (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698482398470x344423025127432260"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify note data - Modify note with empty string request (FAILED - T8CA-387)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698482398470x344423025127432260"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify note data - Modify note with Integer in content_text field (PASSED)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": 100\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698482398470x344423025127432260"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PUT - replace note data",
+					"item": [
+						{
+							"name": "Replace note data - Replace note data without authorization (PASSED)",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"Reminder to customer.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698482398470x344423025127432260"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace note data - Replace note data and check the data (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": \"Second reminder\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698482398470x344423025127432260"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace note data - Replace note data with empty body request(FAILED - T8CA-388)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698482398470x344423025127432260"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace note data - Replace note with empty string request (FAILED - T8CA-389)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content_text\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698482398470x344423025127432260"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Replace note data - Replace note with boolean in content_text field (PASSED)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content_text\": true \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698482398470x344423025127432260"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DELETE - delete a note",
+					"item": [
+						{
+							"name": "Delete a note - Delete a note without authorization (PASSED)",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698481648277x144084360245553490",
+											"description": "Run Delete existing note first and then this request."
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a note - Delete a note and check data (PASSED)",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698479319084x363790735153332900",
+											"description": "Run POST request first and use the id of created note."
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a note - Delete non-existent note (PASSED)",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698479319084x363790735153332900",
+											"description": "Run Delete existing note first and then this request."
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Connect to deal",
+					"item": [
+						{
+							"name": "Connect to deal - create a deal",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"assignee__user\": \"1625047373081x778685405315052900\",\r\n  \"company_name_text\": \"Team1 Kristel deal\",\r\n  \"deal_value_estimation_number\": 1,\r\n  \"name_text\": \"Team1\",\r\n  \"order_number\": 1,\r\n  \"status_option_status\": \"Won\",\r\n  \"visible_to_list_user\": [\r\n    \"1625047373081x778685405315052900\"\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Connect to deal - create a note",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content_text\": \"Note to attach Team 1 deal\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/note/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"note",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Connect to deal - add existing note",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"note_list_custom_note\": [\r\n        \"1698744120163x530962552047053300\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/obj/deal/:UniqueID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"deal",
+										":UniqueID"
+									],
+									"variable": [
+										{
+											"key": "UniqueID",
+											"value": "1698678502415x984459172466767700",
+											"description": "id of deal"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "Tests in this foder are used to verify that it is possible to connect a note to the deal."
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "GET - the list of all users",
+					"item": [
+						{
+							"name": "Get list of Users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET - user by Id",
+					"item": [
+						{
+							"name": "Get User by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/obj/user/:UniqueId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"obj",
+										"user",
+										":UniqueId"
+									],
+									"variable": [
+										{
+											"key": "UniqueId",
+											"value": "1696659261091x541239446325940200"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "in",
+				"value": "query",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "b30ca93d0a7ebe389e9326a22497bf38",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "api_token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://cerebrumhubcrmlite.bubbleapps.io/api/1.1"
+		}
+	]
+}
